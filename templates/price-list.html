@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс-лист - Beauty Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<body>
+    <!-- Навігаційний блок -->
+    <nav class="navbar">
+        <ul>
+            <li><a href=/>Головна</a></li>
+        
+            <li><a href=/services>Послуги</a></li>
+           
+            <li><a href="/price-list">Прайс-лист</a></li>
+            <li>  <a href="/booking">Записатися в салон</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Прайс-лист -->
+    <section id="price-list" class="section">
+        <div class="container">
+            <h2 class="fade-in">Прайс-лист</h2>
+            <table>
+                <tr><th>Послуга</th><th>Майстер</th><th>Ціна</th></tr>
+                <tr><td>Манікюр класичний</td><td>Ірина Петрова</td><td>300 грн</td></tr>
+                <tr><td>Манікюр гель-лак</td><td>Олена Ковальчук</td><td>450 грн</td></tr>
+                <tr><td>макіяж</td><td>Катерина Мельник</td><td>350 грн</td></tr>
+                <tr><td>Укладка</td><td>Анна Ткаченко</td><td>500 грн</td></tr>
+                <tr><td>Педикюр</td><td>Ірина Петрова</td><td>400 грн</td></tr>
+                <tr><td>Фарбування волос</td><td>Юлія Бондаренко</td><td>1200 грн</td></tr>
+                <tr><td>Стрижки</td><td>Юлія Бондаренко</td><td>350 грн</td></tr>
+                <tr><td>косметологія</td><td>Євгенія Бойко</td><td>900 грн</td></tr>
+                
+                <!-- Додаткові послуги тут -->
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <h2>Контакти</h2>
+            <p>Адреса: вул. Прикладна, буд. 123, м. Київ</p>
+            <p>Телефон: +38 (123) 456-7890</p>
+            <p>Email: info@beautystudio.ua</p>
+            <p>Графік роботи:</p>
+            <ul>
+                <li>Понеділок - П'ятниця: 9:00 - 20:00</li>
+                <li>Субота: 10:00 - 18:00</li>
+                <li>Неділя: вихідний</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+</html>

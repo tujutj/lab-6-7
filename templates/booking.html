@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запис в салон</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Головна</a></li>
+            <li><a href="/services">Послуги</a></li>
+            <li><a href="/price-list">Прайс-лист</a></li>
+            <li><a href="/booking">Записатися</a></li>
+        </ul>
+    </nav>
+
+    <section id="price-list" class="section">
+        <div class="container">
+
+        <form id="bookingForm" class="zapis">
+            <h1>Запис в салон</h1>
+
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Ваш телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Оберіть послугу:</label>
+            <select id="service" name="service" required>
+                <option value="Стрижка">Стрижка</option>
+                <option value="Манікюр">Манікюр</option>
+                <option value="Фарбування волосся">Фарбування волосся</option>
+                <option value="Масаж">Масаж</option>
+            </select>
+
+            <label for="appointment_date">Дата і час запису:</label>
+            <input type="datetime-local" id="appointment_date" name="appointment_date" required>
+
+            <button type="submit">Записатися</button>
+        </form></div>
+
+        <div id="successMessage" style="display: none; margin-top: 20px; text-align: center; color: green;">
+            <h2>Дякуємо за ваш запис!</h2>
+            <p>Ваші дані успішно відправлено.</p>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
